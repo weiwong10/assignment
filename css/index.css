@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background: #B1DDF1;
+  text-align: center;
+}
+
+.container {
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  height: 280px;
+  background: white;
+  transition: 0.4s;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  height: 470px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card .img {
+  height: 200px;
+  width: 100%;
+}
+
+.card .img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card .top-text {
+  padding: 5px;
+}
+
+.card .top-text .name {
+  font-size: 25px;
+  font-weight: 600;
+  color: #202020;
+}
+
+.card .top-text p {
+  font-size: 20px;
+  font-weight: 600;
+  color: #e74c3c;
+  line-height: 20px;
+}
+
+.card .bottom-text {
+  padding: 0 20px 10px 20px;
+  margin-top: 5px;
+  background: white;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.1s;
+}
+
+.card:hover .bottom-text {
+  opacity: 1;
+  visibility: visible;
+}
+
+.card .bottom-text .text {
+  text-align: justify;
+}
+
+.card .bottom-text .btn {
+  margin: 10px 0;
+  text-align: left;
+  display: flex;
+  justify-content: center; /* Center the button horizontally */
+}
+
+.card .bottom-text .btn a {
+  text-decoration: none;
+  background: #526ff0;
+  color: #f2f2f2;
+  padding: 5px 8px;
+  border-radius: 3px;
+  display: inline-flex;
+  transition: 0.2s;
+}
+
+.card .bottom-text .btn a:hover {
+  transform: scale(0.9);
+  background-color: #768be8;
+
+}
+
+@media screen and (max-width: 978px) {
+  .card {
+    max-width: 100%;
+    margin: 20px 0;
+  }
+}
+
+
+.box-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Adjust the number of columns based on the number of boxes */
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.box-container .box1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  border: 0.2rem solid black;
+  height: 400px;
+}
+
+.box-container .box1 img {
+  height: 10rem;
+  margin-bottom: 1rem;
+}
+
+.box-container .box1 h3 {
+  margin: 1rem 0;
+  font-size: 2rem;
+  color: black;
+}
+
+.box-container .box1 a,
+.box-container .box1 p {
+  line-height: 2;
+  font-size: 1.5rem;
+  color: #777;
+  display: block;
+}
+
